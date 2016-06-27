@@ -2,14 +2,18 @@ import './app.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+let submitToConsole = event => {
+    event.preventDefault();
+    console.log('Form Submitted');
+};
+
 let closeButton = React.createElement(
-  'div',
-  {id: 'close_button', onClick: event => confirm('Are you sure?') },
-  'X'
+  'input',
+  {id: 'close_button', type: 'submit', value: 'X', onClick: event => confirm('Are you sure?') }
 );
 
 let adHeader = React.createElement(
-  'H1',
+  'h3',
   null,
   'You have won tickets to see Taylor Swift!!'
 );
@@ -27,12 +31,15 @@ let adInput = React.createElement(
 
 let adSubmit = React.createElement(
   'input',
-  { type: 'submit', value: 'CLAIM YOUR PRIZE'  }
-);
+  { type: 'submit', id: 'submit_button', value: 'CLAIM YOUR PRIZE', onClick: event => {
+      event.preventDefault();
+      console.log('Form Submitted');
+  }
+});
 
 let adForm = React.createElement(
   'form',
-  null,
+  { id: 'submit_form'},
   adInput,
   adSubmit
 );

@@ -1,1 +1,40 @@
-/* Your styling here */
+h3, p {
+  color: #F4D748;
+  text-align: center;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+#ad {
+  background-color: #F22FC3;
+  border-radius: 10px;
+  margin: 20px auto 0px auto;
+  max-width: 80%;
+}
+
+#close_button {
+  border: none;
+  background-color: #F22FC3;
+  float: right;
+  margin: 5px 10px 0px 0px;
+}
+
+#email_input {
+  background: #F4D748;
+  color: #A3A37C;
+  max-width: 65%;
+  display: inline-block;
+}
+
+#submit_form {
+  text-align: center;
+}
+
+#submit_button {
+  background-color: #12BFBC;
+  color: #E162BF;
+  margin-left: 16px;
+  display: inline-block;
+}
